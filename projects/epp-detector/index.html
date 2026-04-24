@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detección de EPP de Seguridad</title>
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header -->
+        <header>
+            <div class="logo">
+                <div class="logo-icon"></div>
+                <h1>EPP <span>Guardian</span></h1>
+            </div>
+            <div class="status-indicator">
+                <span class="pulse-dot" id="systemStatusDot"></span>
+                <span id="systemStatusText">Sistema Inactivo</span>
+            </div>
+        </header>
+
+        <main>
+            <!-- Setup Panel -->
+            <div id="setupPanel" class="glass-panel active">
+                <h2>Configuración de Roboflow</h2>
+                <p>Ingresa tu API Key para comenzar la detección en tiempo real con YOLO11.</p>
+                <div class="input-group">
+                    <label for="apiKey">Publishable API Key:</label>
+                    <input type="password" id="apiKey" value="khT7MAyqb1fnpDajWhvq">
+                </div>
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="projectId">Project ID:</label>
+                        <input type="text" id="projectId" value="epp_seguridad" readonly>
+                    </div>
+                    <div class="input-group">
+                        <label for="modelVersion">Versión:</label>
+                        <input type="number" id="modelVersion" value="1" readonly>
+                    </div>
+                </div>
+                <button id="startBtn" class="primary-btn">Iniciar Sistema</button>
+                <p id="setupError" class="error-msg"></p>
+            </div>
+
+            <!-- Video & Canvas Area -->
+            <div class="vision-container glass-panel hidden" id="visionPanel">
+                <div class="video-wrapper">
+                    <video id="webcam" autoplay playsinline muted></video>
+                    <canvas id="overlay"></canvas>
+                    <div class="loading-overlay" id="loadingModel">
+                        <div class="spinner"></div>
+                        <p>Cargando modelo YOLO11...</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- EPP Status Dashboard -->
+            <aside class="dashboard-panel glass-panel hidden" id="dashboardPanel">
+                <h2>Estado del EPP</h2>
+                <p class="subtitle">Análisis en tiempo real</p>
+                
+                <div class="epp-list">
+                    <div class="epp-item missing" data-epp-id="casco">
+                        <div class="epp-icon">⛑️</div>
+                        <div class="epp-info">
+                            <span class="epp-name">Casco</span>
+                            <span class="epp-status-text">Faltante</span>
+                        </div>
+                    </div>
+                    
+                    <div class="epp-item missing" data-epp-id="lentes">
+                        <div class="epp-icon">🥽</div>
+                        <div class="epp-info">
+                            <span class="epp-name">Lentes</span>
+                            <span class="epp-status-text">Faltante</span>
+                        </div>
+                    </div>
+
+                    <div class="epp-item missing" data-epp-id="chaleco">
+                        <div class="epp-icon">🦺</div>
+                        <div class="epp-info">
+                            <span class="epp-name">Chaleco</span>
+                            <span class="epp-status-text">Faltante</span>
+                        </div>
+                    </div>
+
+                    <div class="epp-item missing" data-epp-id="guantes">
+                        <div class="epp-icon">🧤</div>
+                        <div class="epp-info">
+                            <span class="epp-name">Guantes</span>
+                            <span class="epp-status-text">Faltante</span>
+                        </div>
+                    </div>
+
+                    <div class="epp-item missing" data-epp-id="botas">
+                        <div class="epp-icon">🥾</div>
+                        <div class="epp-info">
+                            <span class="epp-name">Botas</span>
+                            <span class="epp-status-text">Faltante</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="global-alert alert-danger" id="globalAlert">
+                    ⚠️ ALERTA: Faltan EPP obligatorios
+                </div>
+            </aside>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

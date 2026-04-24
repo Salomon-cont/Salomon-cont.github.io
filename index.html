@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portafolio de Salomon Moreyra Peralta, Desarrollador de Software">
+    <title>Salomon Moreyra Peralta | Portafolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="video-bg-container">
+        <video autoplay muted loop playsinline id="bg-video">
+            <source
+                src="https://www.shutterstock.com/shutterstock/videos/3965864255/preview/stock-footage--d-render-robotic-hand-holding-glowing-ai-cube-digital-data-programming-code-charts-graphs.mp4"
+                type="video/mp4">
+        </video>
+        <div class="video-overlay"></div>
+    </div>
+    <header class="navbar">
+        <div class="logo">SMP.</div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#sobre-mi">Sobre Mí</a></li>
+                <li><a href="#habilidades">Habilidades</a></li>
+                <li><a href="#proyectos">Proyectos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Hola, soy <span class="highlight">Salomon Moreyra Peralta</span></h1>
+                <p class="subtitle">Desarrollador de Software & Especialista en Tecnología</p>
+                <div class="hero-buttons">
+                    <a href="#proyectos" class="btn primary-btn">Ver Proyectos</a>
+                    <a href="#contacto" class="btn secondary-btn">Contáctame</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="image-wrapper">
+                    <img src="assets/profile.png" alt="Salomon Moreyra Peralta - Avatar">
+                    <div class="glow-effect"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="sobre-mi" class="about">
+            <h2 class="section-title">Sobre Mí</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>Soy un apasionado desarrollador de software con experiencia en la creación de soluciones
+                        innovadoras. Me especializo en transformar ideas complejas en interfaces de usuario elegantes e
+                        intuitivas y sistemas robustos.</p>
+                    <p>Mi formación constante y mis certificaciones respaldan mi compromiso con la excelencia
+                        tecnológica. Siempre estoy en búsqueda de nuevos desafíos que me permitan aplicar las últimas
+                        tecnologías.</p>
+
+                    <div class="education-certifications">
+                        <h3><i class="fas fa-graduation-cap"></i> Formación y Certificaciones</h3>
+                        <ul class="cert-list">
+                            <li><i class="fas fa-check-circle"></i> Ingeniería de Software - SENATI</li>
+                            <li><i class="fas fa-award"></i> Certificación en Tecnologías</li>
+                            <li><i class="fas fa-tools"></i> Soporte Técnico y Mantenimiento</li>
+                            <li><i class="fas fa-code"></i> Desarrollo Web</li>
+                            <li><i class="fas fa-award"></i> Especialización en Inteligencia Artificial y Visión
+                                Computacional</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="habilidades" class="skills">
+            <h2 class="section-title">Tecnologías y Lenguajes</h2>
+            <div class="skills-grid">
+                <!-- Programming Languages -->
+                <div class="skill-category glass-panel">
+                    <h3><i class="fas fa-code"></i> Lenguajes de Programación</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Python</span>
+                        <span class="tag">JavaScript</span>
+                        <span class="tag">TypeScript</span>
+                        <span class="tag">Java</span>
+                        <span class="tag">C++</span>
+                        <span class="tag">C#</span>
+                    </div>
+                </div>
+
+                <!-- Web Technologies -->
+                <div class="skill-category glass-panel">
+                    <h3><i class="fas fa-laptop-code"></i> Desarrollo Web</h3>
+                    <div class="skill-tags">
+                        <span class="tag">HTML5 / CSS3</span>
+                        <span class="tag">React.js</span>
+                        <span class="tag">Node.js</span>
+                        <span class="tag">Express</span>
+                        <span class="tag">Tailwind CSS</span>
+                    </div>
+                </div>
+
+                <!-- Tools & Databases -->
+                <div class="skill-category glass-panel">
+                    <h3><i class="fas fa-database"></i> Herramientas y BD</h3>
+                    <div class="skill-tags">
+                        <span class="tag">Git / GitHub</span>
+                        <span class="tag">Docker</span>
+                        <span class="tag">PostgreSQL</span>
+                        <span class="tag">MongoDB</span>
+                        <span class="tag">TensorFlow / PyTorch</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="proyectos" class="projects">
+            <h2 class="section-title">Mis Proyectos</h2>
+            <div class="projects-container">
+                <!-- Project 1 -->
+                <div class="project-card glass-panel">
+                    <div class="project-img">
+                        <img src="assets/project_ppe.png" alt="Detector de EPPs">
+                        <div class="project-overlay">
+                            <a href="#" class="view-btn"><i class="fas fa-external-link-alt"></i> Ver Demo</a>
+                            <a href="#" class="github-btn"><i class="fab fa-github"></i> Código</a>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Detector de EPPs</h3>
+                        <p>Sistema avanzado de visión computacional diseñado para detectar automáticamente el uso correcto de Equipos de Protección Personal (cascos, chalecos) en entornos de trabajo. Mejora la seguridad laboral utilizando inteligencia artificial.</p>
+                        <div class="project-tech">
+                            <span>Python</span>
+                            <span>OpenCV</span>
+                            <span>YOLO / TensorFlow</span>
+                            <span>React</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add more projects here as needed -->
+                <div class="project-card glass-panel placeholder-card">
+                    <div class="project-info">
+                        <h3>Tu Próximo Proyecto</h3>
+                        <p>Añade aquí otros proyectos en los que hayas trabajado. Describe brevemente el problema que
+                            resuelve y las tecnologías utilizadas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contacto" class="contact">
+            <div class="contact-card glass-panel">
+                <h2 class="section-title">Hablemos</h2>
+                <p>¿Tienes un proyecto en mente o una oportunidad de trabajo? No dudes en contactarme.</p>
+                <div class="contact-methods">
+                    <p><i class="fas fa-envelope"></i> <strong>Email:</strong> moreyrasalomon41@gmail.com</p>
+                    <p><i class="fab fa-whatsapp"></i> <strong>WhatsApp:</strong> 925888592</p>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/tu-perfil" target="_blank" aria-label="LinkedIn"><i
+                            class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/tu-usuario" target="_blank" aria-label="GitHub"><i
+                            class="fab fa-github"></i></a>
+                    <a href="mailto:moreyrasalomon41@gmail.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="https://wa.me/51925888592" target="_blank" aria-label="WhatsApp"><i
+                            class="fab fa-whatsapp"></i></a>
+                </div>
+                <a href="mailto:moreyrasalomon41@gmail.com" class="btn primary-btn mt-4">Enviar Mensaje</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Hacker Terminal Modal -->
+    <div id="tech-modal" class="hacker-modal hidden">
+        <div class="terminal-window">
+            <div class="terminal-header">
+                <div class="terminal-buttons">
+                    <span></span><span></span><span></span>
+                </div>
+                <span class="terminal-title">smp-terminal ~ /skills</span>
+                <button id="close-modal" class="close-btn"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="terminal-body">
+                <p class="command-line"><span class="prompt">root@smp:~$</span> <span id="tech-cmd"></span></p>
+                <div id="tech-description" class="terminal-output"></div>
+                <span class="cursor">_</span>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Salomon Moreyra Peralta. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
